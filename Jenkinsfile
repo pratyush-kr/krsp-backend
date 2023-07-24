@@ -7,13 +7,13 @@ pipeline {
     stages {
         stage('Removing old') {
             steps {
-                sh 'rm -rf backend'
+                sh 'rm -rf krsp-backend'
             }
         }
         stage('Checkout') {
             steps {
-                sh 'mkdir backend'
-                sh 'cd backend'
+                sh 'mkdir krsp-backend'
+                sh 'cd krsp-backend'
                 sh 'git clone https://github.com/pratyush-kr/krsp-backend.git'
             }
         }
